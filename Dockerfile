@@ -1,6 +1,9 @@
 FROM ubuntu:14.04
 MAINTAINER Thomas Heilbronner <thomas.heilbronner@gmail.com>
-RUN apt-get update && apt-get install -y python-setuptools && apt-get clean
+RUN apt-get update && apt-get install -y\
+  python-setuptools\
+  python-dev\
+  libyaml-dev
 RUN easy_install pip
-RUN pip install jenkins-job-builder
+RUN pip install PyYAML python-jenkins
 
