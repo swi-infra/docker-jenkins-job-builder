@@ -1,13 +1,19 @@
 FROM ubuntu:14.04
-MAINTAINER Thomas Heilbronner <thomas.heilbronner@gmail.com>
-RUN apt-get update && apt-get install -y\
-  python-setuptools\
-  python-dev\
-  libyaml-dev
+
+MAINTAINER Bertrand Roussel <broussel@sierrawireless.com>
+
+RUN apt-get update
+RUN apt-get install -y python-setuptools python-dev libyaml-dev git
+
 RUN easy_install pip
-RUN pip install\
-  PyYAML\
-  python-jenkins\
-  jenkins-job-builder\
-  jenkins-job-builder-xvnc
+
+ENV VERSION 1.2.0
+
+RUN ( \
+        cd /tmp && \
+        git clone git://git.openstack.org/openstack-infra/jenkins-job-builder && \
+        cd jenkins-job-builder && \
+        git checkout $VERSION && \
+        pip install . \
+    )
 
