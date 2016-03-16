@@ -18,8 +18,3 @@ RUN ( \
         pip install . \
     )
 
-# plugin slack
-RUN ( \
-        pip install jenkins-jobs-slack \
-    )
-
