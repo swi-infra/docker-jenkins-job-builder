@@ -7,7 +7,7 @@ RUN apt-get install -y python-setuptools python-dev libyaml-dev git
 
 RUN easy_install pip
 
-ENV VERSION 1.5.0
+ENV VERSION 1.6.1
 
 # jenkins-job-builder from git
 RUN ( \
