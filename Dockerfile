@@ -1,11 +1,8 @@
-FROM ubuntu:14.04
+FROM alpine:3.4
 
 MAINTAINER Bertrand Roussel <broussel@sierrawireless.com>
 
-RUN apt-get update
-RUN apt-get install -y python-setuptools python-dev libyaml-dev git
-
-RUN easy_install pip
+RUN apk add --no-cache py-pip git
 
 ENV VERSION 1.6.1
 
