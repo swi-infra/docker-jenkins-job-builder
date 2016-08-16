@@ -2,7 +2,7 @@ FROM alpine:3.4
 
 MAINTAINER Bertrand Roussel <broussel@sierrawireless.com>
 
-RUN apk add --no-cache py-pip git
+RUN apk add --no-cache py-pip git bash
 
 ENV VERSION 1.6.1
 
