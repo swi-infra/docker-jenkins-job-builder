@@ -4,7 +4,7 @@ MAINTAINER Bertrand Roussel <broussel@sierrawireless.com>
 
 RUN apk add --no-cache py-pip git bash
 
-ENV VERSION 2.0.0.0b2
+ENV VERSION origin/master
 
 # jenkins-job-builder from git
 RUN ( \
