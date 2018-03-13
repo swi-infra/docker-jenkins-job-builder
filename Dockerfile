@@ -4,9 +4,8 @@ MAINTAINER Bertrand Roussel <broussel@sierrawireless.com>
 
 RUN apk add --no-cache py-pip git bash
 
-ENV VERSION origin/timeoutplugin
-#ENV REPO_URL git://git.openstack.org/openstack-infra/jenkins-job-builder
-ENV REPO_URL https://github.com/CoRfr/jenkins-job-builder
+ENV VERSION origin/master
+ENV REPO_URL git://git.openstack.org/openstack-infra/jenkins-job-builder
 
 # jenkins-job-builder from git
 RUN ( \
