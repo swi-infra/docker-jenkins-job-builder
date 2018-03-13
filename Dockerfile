@@ -4,12 +4,13 @@ MAINTAINER Bertrand Roussel <broussel@sierrawireless.com>
 
 RUN apk add --no-cache py-pip git bash
 
-ENV VERSION 1.6.2
+ENV VERSION 2.0.3
+ENV REPO_URL git://git.openstack.org/openstack-infra/jenkins-job-builder
 
 # jenkins-job-builder from git
 RUN ( \
         cd /tmp && \
-        git clone git://git.openstack.org/openstack-infra/jenkins-job-builder && \
+        git clone $REPO_URL && \
         cd jenkins-job-builder && \
         git checkout $VERSION && \
         pip install . \
