@@ -8,6 +8,7 @@ Branches:
  - dev: `quay.io/swi-infra/jenkins-job-builder:dev`
 
 Tags:
+ - `2.0.6`
  - `2.0.3`
  - `1.6.2`
  - `1.6.1`
