@@ -5,11 +5,10 @@ MAINTAINER Bertrand Roussel <broussel@sierrawireless.com>
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
     apk add --no-cache py-pip \
                        py3-pip \
-                       py3-regex \
-                       py3-typed-ast \
                        git \
                        bash \
-                       grep
+                       grep \
+                       openssh
 
 ENV VERSION 2.10.1
 ENV REPO_URL https://opendev.org/jjb/jenkins-job-builder.git
